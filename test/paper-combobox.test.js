@@ -25,4 +25,21 @@ describe('<anypoint-combobox>', function() {
       assert.isFalse(node.opened);
     });
   });
+
+  describe('a11y', () => {
+    async function sourceFixture(source) {
+      return await fixture(html`
+        <anypoint-combobox
+          .source="${source}"
+          value="a"
+        >
+          <label slot="label">Test</label>
+        </anypoint-combobox>`);
+    }
+
+    it('is accessible with value', async () => {
+      const element = await sourceFixture();
+      await assert.isAccessible(element);
+    });
+  });
 });

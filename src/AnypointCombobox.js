@@ -42,6 +42,7 @@ export class AnypointCombobox extends AnypointInput {
   }
 
   firstUpdated() {
+    super.firstUpdated();
     // this is required for autocomplete to set up the
     // targer as `inputElement` is compyted getter.
     this.requestUpdate();
@@ -52,10 +53,11 @@ export class AnypointCombobox extends AnypointInput {
     <div class="ac-wrapper">
       ${super.render()}
       <anypoint-autocomplete
-        .target="${this.inputElement}"
+        .target="${this}"
         .source="${this.source}"
         .compatibility="${this.compatibility}"
         @activate="${this._onActivate}"
+        noTargetControls
         openonfocus></anypoint-autocomplete>
     </div>
     `;
