@@ -9,9 +9,9 @@ import '@anypoint-web-components/anypoint-autocomplete/anypoint-autocomplete.js'
  * @memberof UiElements
  */
 export class AnypointCombobox extends AnypointInput {
-  static get styles() {
+  get styles() {
     return [
-      AnypointInput.styles,
+      super.styles,
       css`
       .ac-wrapper {
         position: relative;
@@ -50,6 +50,7 @@ export class AnypointCombobox extends AnypointInput {
 
   render() {
     return html`
+    <style>${this.styles}</style>
     <div class="ac-wrapper">
       ${super.render()}
       <anypoint-autocomplete
