@@ -1,14 +1,12 @@
 import { html, css } from 'lit-element';
 import { AnypointInput } from '@anypoint-web-components/anypoint-input/src/AnypointInput.js';
 import '@anypoint-web-components/anypoint-autocomplete/anypoint-autocomplete.js';
+
 /**
  * `anypoint-combobox`
- *
- * @customElement
- * @demo demo/index.html
- * @memberof UiElements
  */
 export class AnypointCombobox extends AnypointInput {
+  // @ts-ignore
   get styles() {
     return [
       super.styles,
@@ -24,7 +22,7 @@ export class AnypointCombobox extends AnypointInput {
   static get properties() {
     return {
       /**
-       * List of suggestions to display.
+       * List of suggestions to render.
        * If the array items are strings they will be used for display a suggestions and
        * to insert a value.
        * If the list is an object the each object must contain `value` and `display`
@@ -36,15 +34,15 @@ export class AnypointCombobox extends AnypointInput {
     };
   }
 
-  _onActivate() {
-    const node = this.shadowRoot.querySelector('anypoint-autocomplete');
-    node._opened = false
+  constructor() {
+    super();
+    this.source = undefined;
   }
 
-  firstUpdated() {
-    super.firstUpdated();
+  firstUpdated(arg) {
+    super.firstUpdated(arg);
     // this is required for autocomplete to set up the
-    // targer as `inputElement` is compyted getter.
+    // targer as `inputElement` is computed getter.
     this.requestUpdate();
   }
 
@@ -57,9 +55,9 @@ export class AnypointCombobox extends AnypointInput {
         .target="${this}"
         .source="${this.source}"
         .compatibility="${this.compatibility}"
-        @activate="${this._onActivate}"
         noTargetControls
-        openonfocus></anypoint-autocomplete>
+        openonfocus
+      ></anypoint-autocomplete>
     </div>
     `;
   }

@@ -2,9 +2,9 @@ import { fixture, assert, html, aTimeout } from '@open-wc/testing';
 import * as MockInteractions from '@polymer/iron-test-helpers/mock-interactions.js';
 import '../anypoint-combobox.js';
 
-describe('<anypoint-combobox>', function() {
+describe('<anypoint-combobox>', () => {
   async function sourceFixture(source) {
-    return (await fixture(html`
+    return (fixture(html`
       <anypoint-combobox .source="${source}" value="a"></anypoint-combobox>`));
   }
 
@@ -19,7 +19,7 @@ describe('<anypoint-combobox>', function() {
     it('closes the autocomplete on activate event', async () => {
       const node = element.shadowRoot.querySelector('anypoint-autocomplete');
       node.renderSuggestions();
-      await aTimeout();
+      await aTimeout(0);
       const item = node.querySelector('anypoint-item');
       MockInteractions.tap(item);
       assert.isFalse(node.opened);
@@ -27,8 +27,8 @@ describe('<anypoint-combobox>', function() {
   });
 
   describe('a11y', () => {
-    async function sourceFixture(source) {
-      return await fixture(html`
+    async function a11yFixture(source) {
+      return fixture(html`
         <anypoint-combobox
           .source="${source}"
           value="a"
@@ -38,7 +38,7 @@ describe('<anypoint-combobox>', function() {
     }
 
     it('is accessible with value', async () => {
-      const element = await sourceFixture();
+      const element = await a11yFixture();
       await assert.isAccessible(element);
     });
   });
