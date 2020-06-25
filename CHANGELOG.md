@@ -90,3 +90,35 @@
 * updated Travis configuration to connect to Sauce Labs [59945fb](https://github.com/anypoint-web-components/anypoint-combobox/commit/59945fb647ff4588535f3d851484c66ca86a8190) by Pawel
 
 
+<a name="0.2.0"></a>
+## 0.2.0 (2020-06-25)
+
+### Build
+
+* bumping version [7dda279](https://github.com/anypoint-web-components/anypoint-combobox/commit/7dda27925018506b3459d93eb55ba7b571d80467) by Pawel
+* bumping version [e5bc7ea](https://github.com/anypoint-web-components/anypoint-combobox/commit/e5bc7ea5016db7489f9d5b7753476c8402657216) by Pawel
+* publishing stable element [738a696](https://github.com/anypoint-web-components/anypoint-combobox/commit/738a6969c1f5dad798c7bc991f77fd2728b67f3c) by Pawel
+
+
+### Update
+
+* upgrading dependencies [60118e1](https://github.com/anypoint-web-components/anypoint-combobox/commit/60118e1b301c30e8894b72869054ddf7e13cc526) by Pawel
+
+
+### Bug Fixes
+
+* fixing styles setup after base class changes [5e34c5b](https://github.com/anypoint-web-components/anypoint-combobox/commit/5e34c5b9decd2088910b8263fc5d218c6b524a91) by Pawel
+
+
+### Refactor
+
+* upgrading to new autocomplete [ba5574b](https://github.com/anypoint-web-components/anypoint-combobox/commit/ba5574b37acfc30ec4601e06a312a69708d00854) by Pawel
+
+
+### Testing
+
+* adding a11y tests [8ced38a](https://github.com/anypoint-web-components/anypoint-combobox/commit/8ced38a18e997e63fc1c2f2333e7bcf1c8c2a1cd) by Pawel
+* updated Travis configuration to connect to Sauce Labs [4d5090e](https://github.com/anypoint-web-components/anypoint-combobox/commit/4d5090e8c503be60abef0b16240371231696f976) by Pawel
+* updated Travis configuration to connect to Sauce Labs [59945fb](https://github.com/anypoint-web-components/anypoint-combobox/commit/59945fb647ff4588535f3d851484c66ca86a8190) by Pawel
+
+
