@@ -122,3 +122,27 @@
 * updated Travis configuration to connect to Sauce Labs [59945fb](https://github.com/anypoint-web-components/anypoint-combobox/commit/59945fb647ff4588535f3d851484c66ca86a8190) by Pawel
 
 
+<a name="0.2.1"></a>
+## [0.2.1](https://github.com/anypoint-web-components/anypoint-combobox/compare/0.1.2...0.2.1) (2020-07-25)
+
+### Build
+
+* bumping version [1c86066](https://github.com/anypoint-web-components/anypoint-combobox/commit/1c860669c7e6fc97ea7288d3fc1cecee46120f58) by Pawel
+
+
+### Update
+
+* updating dependnecies [e41358e](https://github.com/anypoint-web-components/anypoint-combobox/commit/e41358ecea67e3cc412dbd1859b5cc052c9f9ea0) by Pawel
+* [ci skip] automated merge master->stage. syncing main branches [56bcfcb](https://github.com/anypoint-web-components/anypoint-combobox/commit/56bcfcb6aa7e323ff07cd331a00edde591532686) by Ci agent
+
+
+### Bug Fixes
+
+* adding missing index.js file [e1f6a60](https://github.com/anypoint-web-components/anypoint-combobox/commit/e1f6a604aa87d4b5d84a448a8858da55c5649ee3) by Pawel
+
+
+### Refactor
+
+* upgrading to new autocomplete [ba5574b](https://github.com/anypoint-web-components/anypoint-combobox/commit/ba5574b37acfc30ec4601e06a312a69708d00854) by Pawel
+
+
