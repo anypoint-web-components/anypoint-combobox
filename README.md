@@ -5,7 +5,7 @@ UI of an input field with suggestions.
 
 [![Published on NPM](https://img.shields.io/npm/v/@anypoint-web-components/anypoint-combobox.svg)](https://www.npmjs.com/package/@anypoint-web-components/anypoint-combobox)
 
-[![tests](https://github.com/anypoint-web-components/anypoint-combobox/actions/workflows/tests.yml/badge.svg)](https://github.com/anypoint-web-components/anypoint-combobox/actions/workflows/tests.yml)
+[![tests](https://github.com/anypoint-web-components/anypoint-combobox/actions/workflows/deployment.yml/badge.svg)](https://github.com/anypoint-web-components/anypoint-combobox/actions/workflows/deployment.yml)
 
 ## Usage
 
