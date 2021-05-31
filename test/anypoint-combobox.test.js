@@ -1,8 +1,13 @@
 import { fixture, assert, html, aTimeout } from '@open-wc/testing';
-import * as MockInteractions from '@polymer/iron-test-helpers/mock-interactions.js';
 import '../anypoint-combobox.js';
 
+/** @typedef {import('../index').AnypointCombobox} AnypointCombobox */
+
 describe('<anypoint-combobox>', () => {
+  /**
+   * @param {string[]=} source 
+   * @returns {Promise<AnypointCombobox>}
+   */
   async function sourceFixture(source) {
     return (fixture(html`
       <anypoint-combobox .source="${source}" value="a"></anypoint-combobox>`));
@@ -10,7 +15,7 @@ describe('<anypoint-combobox>', () => {
 
   describe('Selection', () => {
     const suggestions = ['Apple', 'Apricot', 'Avocado'];
-    let element;
+    let element = /** @type AnypointCombobox */ (null);
 
     beforeEach(async () => {
       element = await sourceFixture(suggestions);
@@ -20,8 +25,8 @@ describe('<anypoint-combobox>', () => {
       const node = element.shadowRoot.querySelector('anypoint-autocomplete');
       node.renderSuggestions();
       await aTimeout(0);
-      const item = node.querySelector('anypoint-item');
-      MockInteractions.tap(item);
+      const item = /** @type HTMLElement */ (node.querySelector('anypoint-item'));
+      item.click();
       assert.isFalse(node.opened);
     });
   });
