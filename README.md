@@ -1,4 +1,8 @@
-# anypoint-combobox
+# Deprecated
+
+This component has been moved to `anypoint-web-components/awc`.
+
+-----
 
 A combo box is a combination of a text field and the autocomplete element to provide an
 UI of an input field with suggestions.
